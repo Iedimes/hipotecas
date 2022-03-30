@@ -13,19 +13,16 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> {{ trans('admin.mh.actions.index') }}
-                        <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/mhs/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.mh.actions.create') }}</a>
-                    </div>
+                        <h3 ><i class="fa fa-list-alt" aria-hidden="true"style="margin: 5px;"></i>Listados de Hipotecas<h3>
+                      <div class="col"> <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/mhs/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.mh.actions.create') }}</a></div>
 
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="form-group col-sm-12">
+                      <span class="pull-right pr-2">
+                       <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" alt="para descargar en formato excel"href="{{ url('exportarExcel/') }}" role="button"><i class="fa fa-plus"></i>&nbsp;  EXPORTAR A EXCEL</a>
+                     </span>
 
-                                <span class="float-right"><a href="{{ url('exportarExcel/')}}" class="btn btn-block btn-square btn-sm text-white bg-success"><i class="fa fa-file-excel-o"></i> Exportar Excel</a></span>
-                            </div>
+                   </div>
 
-                        </div>
-                    </div>
+
 
                     <div class="card-body" v-cloak>
                         <div class="card-block">
@@ -33,9 +30,9 @@
                                 <div class="row justify-content-md-between">
                                     <div class="col col-lg-7 col-xl-5 form-group">
                                         <div class="input-group">
-                                            <input class="form-control" placeholder="{{ trans('brackets/admin-ui::admin.placeholder.search') }}" v-model="search" @keyup.enter="filter('search', $event.target.value)" />
+                                            <input class="form-control" placeholder="Buscar por Nº Documentos, Codigos u otros....." v-model="search" @keyup.enter="filter('search', $event.target.value)" />
                                             <span class="input-group-append">
-                                                <button type="button" class="btn btn-primary" @click="filter('search', search)"><i class="fa fa-search"></i>&nbsp; {{ trans('brackets/admin-ui::admin.btn.search') }}</button>
+                                                <button type="button" class="btn btn-primary" @click="filter('search', search)"><i class="fa fa-search"></i>&nbsp;</button>
                                             </span>
                                         </div>
 
