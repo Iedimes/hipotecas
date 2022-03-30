@@ -33,10 +33,10 @@ class Mh extends Model
     protected $appends = ['resource_url'];
     protected $with = ['detallehipoteca','detallecartera','detallejuridico'];
 
-    public function detalleMh()
-    {
-      return $this->hasOne(DetalleMh::class, 'VivPer')->latest('VivPer');
-    }
+    // public function detalleMh()
+    // {
+    //   return $this->hasOne(DetalleMh::class, 'VivPer')->latest('VivPer');
+    // }
 
     public function detallehipoteca()
      {
