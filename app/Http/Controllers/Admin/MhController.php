@@ -117,7 +117,7 @@ class MhController extends Controller
 
     public function exportExcel()
     {
-        return Mh::find(1886);
+        //return Mh::find(1886);
         return Excel::download(new MhExport, 'hipotecas.xlsx');
     }
 

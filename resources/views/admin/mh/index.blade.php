@@ -17,7 +17,7 @@
                       <div class="col"> <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/mhs/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.mh.actions.create') }}</a></div>
 
                       <span class="pull-right pr-2">
-                       <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" alt="para descargar en formato excel"href="{{ url('exportarExcel/') }}" role="button"><i class="fa fa-plus"></i>&nbsp;  EXPORTAR A EXCEL</a>
+                       <a class="btn btn-success btn-sm pull-right m-b-0" alt="para descargar en formato excel"href="{{ url('exportarExcel/') }}" role="button"><i class="fa fa-plus"></i>&nbsp;  EXPORTAR A EXCEL</a>
                      </span>
 
                    </div>
