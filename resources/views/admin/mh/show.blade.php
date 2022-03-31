@@ -19,11 +19,11 @@
         <div class="row">
 
             <div class="form-group col-sm-4">
-                <p class="card-text"><strong>DEPARTAMENTO: {{ $det->dpto ? $det->dpto->DptoNom:'Sin Datos'}}</strong> </p>
+                <p class="card-text"><strong>DEPARTAMENTO: {{ $det->dpto ? $det->dpto->DptoNom:''}}</strong> </p>
             </div>
 
             <div class="form-group col-sm-4">
-                <p class="card-text"><strong>LOCALIDAD: {{ $det->localidad ? $det->localidad->CiuNom:'Sin Datos'}}</strong> </p>
+                <p class="card-text"><strong>LOCALIDAD: {{ $det->localidad ? $det->localidad->CiuNom:''}}</strong> </p>
             </div>
 
 

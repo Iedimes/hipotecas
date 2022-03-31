@@ -147,7 +147,7 @@ class MhController extends Controller
         }
         $car = Cartera::where('PerCod', $mh->documento)->first();
 
-        $jur = Juridico::where('PerCod', $mh->documento)->first();
+        $jur = Juridico::where('PerCod', $mh->documento)->get()->last();
 
 
 

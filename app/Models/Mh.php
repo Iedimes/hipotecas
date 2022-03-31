@@ -31,7 +31,7 @@ class Mh extends Model
     public $timestamps = false;
 
     protected $appends = ['resource_url'];
-    protected $with = ['detallehipoteca','detallecartera','detallejuridico'];
+    //protected $with = ['detallehipoteca','detallecartera','detallejuridico'];
 
     // public function detalleMh()
     // {

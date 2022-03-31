@@ -17,7 +17,7 @@
                       <div class="col"> <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/mhs/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.mh.actions.create') }}</a></div>
 
                       <span class="pull-right pr-2">
-                       <a class="btn btn-success btn-sm pull-right m-b-0" alt="para descargar en formato excel"href="{{ url('exportarExcel/') }}" role="button"><i class="fa fa-plus"></i>&nbsp;  EXPORTAR A EXCEL</a>
+                       {{--<a class="btn btn-success btn-sm pull-right m-b-0" alt="para descargar en formato excel"href="{{ url('exportarExcel/') }}" role="button"><i class="fa fa-plus"></i>&nbsp;  EXPORTAR A EXCEL</a>--}}
                      </span>
 
                    </div>
@@ -69,6 +69,8 @@
                                         <th is='sortable' :column="'obs'">{{ trans('admin.mh.columns.obs') }}</th>
                                         <th is='sortable' :column="'fecha_reins'">{{ trans('admin.mh.columns.fecha_reins') }}</th>
 
+
+
                                         <th></th>
                                     </tr>
                                     <tr v-show="(clickedBulkItemsCount > 0) || isClickedAll">
@@ -96,15 +98,15 @@
                                         <td>@{{ item.proyecto }}</td>
                                         <td>@{{ item.documento }}</td>
                                         <td>@{{ item.adjudicatario }}</td>
-                                        <td>@{{ item.fecha_ins | date }}</td>
+                                        <td>@{{ item.fecha_ins | datetime }}</td>
                                         <td>@{{ item.institucion_acreedora }}</td>
                                         <td>@{{ item.obs }}</td>
-                                        <td>@{{ item.fecha_reins | date }}</td>
+                                        <td>@{{ item.fecha_reins | datetime }}</td>
 
                                         <td>
                                             <div class="row no-gutters">
                                                 <div class="col-auto">
-                                                    <a class="btn btn-sm btn-spinner btn-info" :href="item.resource_url + '/show'" title="{{ trans('brackets/admin-ui::admin.btn.show') }}" role="button"><i class="fa fa-search"></i></a>
+                                                    {{--<a class="btn btn-sm btn-spinner btn-info" :href="item.resource_url + '/show'" title="{{ trans('brackets/admin-ui::admin.btn.show') }}" role="button"><i class="fa fa-search"></i></a>--}}
                                                 </div>
                                                 <div class="col-auto">
                                                     <a class="btn btn-sm btn-spinner btn-info" :href="item.resource_url + '/edit'" title="{{ trans('brackets/admin-ui::admin.btn.edit') }}" role="button"><i class="fa fa-edit"></i></a>

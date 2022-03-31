@@ -21,7 +21,7 @@ class MhExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoS
     */
     public function collection()
     {
-        return Mh::paginate(100);
+        return Mh::all();
 
     }
 
@@ -43,7 +43,7 @@ class MhExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoS
             'ULTIMO VENCIMIENTO',
             'ULTIMO MOVIMIENTO',
             'ULTIMA ACTUACION',
-            'OBSERVACION DETALLE',
+            'OBSERVACION ACTUACION',
         ];
     }
 
@@ -52,7 +52,7 @@ class MhExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoS
 
         $det = DetalleMh::where('VivPer', $invoice->documento)->first();
         $car = Cartera::where('PerCod', $invoice->documento)->first();
-        $jur = Juridico::where('PerCod', $invoice->documento)->first();
+        $jur = Juridico::where('PerCod', $invoice->documento)->get()->last();
         //dd($detalle);
         return [
             $invoice->codigo,
