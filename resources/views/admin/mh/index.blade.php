@@ -98,10 +98,10 @@
                                         <td>@{{ item.proyecto }}</td>
                                         <td>@{{ item.documento }}</td>
                                         <td>@{{ item.adjudicatario }}</td>
-                                        <td>@{{ item.fecha_ins | datetime }}</td>
+                                        <td>@{{ item.fecha_ins }}</td>
                                         <td>@{{ item.institucion_acreedora }}</td>
                                         <td>@{{ item.obs }}</td>
-                                        <td>@{{ item.fecha_reins | datetime }}</td>
+                                        <td>@{{ item.fecha_reins }}</td>
 
                                         <td>
                                             <div class="row no-gutters">
